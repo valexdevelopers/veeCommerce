@@ -1,0 +1,805 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Admin | Home</title>
+        <meta charset="Utf-8">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="description" content="A robust, hihgly scalable, user friendly, seo optiomized Admin dashboard for ecommerce web site with great functionality and features by virtue">
+        <meta name="keywords" content="E-commerce, ecommerce, dashboard, robust, seo optimized, scalable">
+        <meta name="author" content="Egerega Virtue">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="dashboardStyles/standards.css" >
+        <link rel="stylesheet" href="dashboardStyles/mediaqueries.css" >
+        <link rel="stylesheet" href="dashboardStyles/custom.css" >
+        
+        <!--bootstrap css and js -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    </head>
+    <style>
+        
+    </style>
+    <body >
+        <div class="page-wrapper">
+            <section >
+                <div class="rows mother-row">
+                    <div class="menu-wrapper " id="menu_wrapper">
+                        
+                        <div class="menu_drop_down">
+                            <ul class="">
+                                <div class="menu-close-wrap lg-nodisplay">
+                                    <div>&nbsp;</div>
+                                    <div class="close-menu" id="menu-close-button" ><i class="bi bi-x"></i></div>
+                                </div>
+                                
+                                <!--  people -->
+                                <li class="content-description">People</li>
+
+                               
+                                    <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-admin'); return false;" role="button"> <i class="bi bi-people"></i><span>Admins</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section  class="child-list" id="child-list-admin" >
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-person-lines-fill"></i><span>Admin List</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-person-check"></i><span>Verify Admin</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-envelope"></i><span>Mail Admin</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-person"></i><span>Super Admin</span></a></li>
+
+                                    </section>
+                               
+
+                                
+                                    <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-user'); return false;" role="button"> <i class="bi bi-person-circle"></i><span>Users</span> <i class="bi bi-chevron-right" id="carret-opener"></i></a></li>
+                                    <section class="child-list" id="child-list-user">
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-person-lines-fill"></i><span>Users List</span></a></li>
+                                        
+                                    </section>
+                                
+                                <!-- end of people -->
+
+                                <!-- Store Inventory -->
+    
+                                <li class="content-description">Store Inventory</li>
+                                
+                                    <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-brand'); return false;" role="button"> <i class="bi bi-shield-check"></i><span>Brands</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section class="child-list" id="child-list-brand">
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-list"></i><span>Brand List</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-plus"></i><span>Add Brand</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-pen"></i><span>Edit Brand</span></a></li>
+
+                                    </section>
+
+                                
+                                <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-category'); return false;" role="button"> <i class="bi bi-boxes"></i><span>Categories</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section  class="child-list" id="child-list-category">
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-list"></i><span>Category List</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-plus"></i><span>Add Category</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-pen"></i><span>Edit Category</span></a></li>
+                                    </section>
+
+                                
+                                <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-product'); return false;" role="button"> <i class="bi bi-box-seam"></i><span>Products</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section class="child-list" id="child-list-product">
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-list"></i><span>Product List</span> </a></li>
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-plus"></i><span>Add Product</span> </a></li>
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-pen"></i><span>EditProduct</span> </a></li>
+                                    </section>
+                                <!-- end of Store Inventory -->
+
+                                <!-- Sales & Coupons-->
+                                <li class="content-description">Sales & Coupons</li>
+                                
+                                    <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-order'); return false;" role="button"> <i class="bi bi-cart4"></i><span>Orders</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section class="child-list" id="child-list-order" >
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-list"></i><span>Order List</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-plus"></i><span>Add Order</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-pen"></i><span>Edit Order</span></a></li>
+
+                                    </section>
+
+                                
+                                <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-purchase'); return false;" role="button"> <i class="bi bi-cart-check"></i><span>Purchases</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section class="child-list" id="child-list-purchase">
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-list"></i><span>Purchase List</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-plus"></i><span>Add Purchase</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-pen"></i><span>Edit Purchase</span></a></li>
+                                    </section>
+
+                                
+                                    <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-coupon'); return false;" role="button"> <i class="bi bi-percent"></i><span>Coupons</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section class="child-list" id="child-list-coupon">
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-list"></i><span>Coupon List</span> </a></li>
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-plus"></i><span>Add Coupon</span> </a></li>
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-pen"></i><span>Update Coupon</span> </a></li>
+                                    </section>
+                                <!-- end of Sales & Coupons-->
+                                
+                                <!-- Store Front-->
+                                <li class="content-description">Store Front</li>
+
+                                
+                                    <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-store-section'); return false;" role="button"> <i class="bi bi-tags"></i><span>Store Section</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section class="child-list" id="child-list-store-section">
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-list"></i><span>Section List</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-plus"></i><span>Add Section</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-pen"></i><span>Edit Section</span></a></li>
+
+                                    </section>
+
+                                
+                                    <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-banner'); return false;" role="button"> <i class="bi bi-flag"></i><span>Store Banner</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section class="child-list" id="child-list-banner" >
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-list"></i><span>Show Banner</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-pen"></i><span>Edit Banner</span></a></li>
+                                    </section>
+
+                                
+                                <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-advert'); return false;" role="button"> <i class="bi bi-badge-ad"></i><span>Advert Banner</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section class="child-list" id="child-list-advert">
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-list"></i><span>Advert List</span> </a></li>
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-plus"></i><span>Add Advert</span> </a></li>
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-box-seam"></i><span>Update Advert</span> </a></li>
+                                    </section>
+
+                                
+                                <li class="menu-li-item"><a href="#" role="button"> <i class="bi bi-person-badge"></i><span>Logo</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section class="child-list" >
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-box-seam"></i><span>View Logo</span> </a></li>
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-plus"></i><span>Add Logo</span> </a></li>
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-box-seam"></i><span></span> </a></li>
+                                    </section>
+                                <!-- end of Store Front-->
+
+                                <!-- Sales & Coupons-->
+                                <li class="content-description">Analytics</li>
+
+                                <li class="menu-li-item"><a href="#" role="button"> <i class="bi bi-person-circle"></i><span>Profile</span></a></li>
+                                   
+                                <li class="menu-li-item">
+                                    <form>
+                                        <button ><i class="bi bi-box-arrow-right"></i><span>Logout</span> </button>
+                                    </form>
+                                    
+                                    
+                                   
+                              
+                                    
+                                <!-- end of Sales & Coupons-->
+                            </ul>
+
+                        </div>
+
+                        
+                    </div>
+
+                    <!-- main page wrap -->
+                    <div class="main-page-wrapper">
+                        <!-- main page: header wrap row  -->
+                        <div class="rows header-row sticky-row with-box-shadow">
+                            <div class="lg-nodisplay menu-btn-wrap" id="menu-open-button">
+                                <button class="menu-open-button" role="button" onclick="document.getElementById('menu_wrapper').style.display = 'block'"><i class="bi bi-list"></i> </button>
+                            </div>
+                            <div class="brand">
+                                <img class="logo" src="{{asset('admincontent/images/logo/logo.png') }}" alt="brand logo" title="logo">
+                            </div>
+                            <div >
+                                <form class="header-search-form">
+                                    <div class="input-group ">
+                                        <input type="text" class="form-control search-input" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                        <button class="search-btn darkblue-bg color-cream" type="submit" id="button-addon1"><i class="bi bi-search search-btn"></i></button>
+                                      </div>                                      
+                                </form>
+                            </div>
+                            <div class="avatar-notification-wrap">
+                                <div class="notifications" role="button" onclick="document.getElementById('notification-wrap').style.display = 'block'"><i class="bi bi-bell"></i><span class="notification-count darkblue-bg color-cream">5</span></div>
+
+                                <div class="profile-details" role="button" onclick="document.getElementById('extra-details').style.display = 'block'"><img class="user-image" src="{{asset('admincontent/images/avatars/avartar-user.jpg') }}" ></div>
+                            </div>
+                            
+                        </div>
+                        
+                        <!-- main page: roles-wrap wrap row  -->
+                        <section class="scroll-y">
+                            <div class="roles-wrap">
+                                <div class="roles with-box-shadow">
+                                    <div class="no-of-users-row">
+                                        <div><span>Display Products</span></div>
+                                        <div class="roles-images roles-move-left">
+                                            <img src="{{asset('admincontent/images/avatars/1.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/5.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/4.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/12.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/6.png') }}">
+                                        </div>
+                                    </div>
+                                    <div class="roler-row">
+                                        <div class="row-details">
+                                            <p>Admins</p>
+                                            <p><a href="#" class="small-text no-text-deco lightblue-text">View All</a></p>
+                                        </div>
+                                        <div class="roles-move-left d-flex-end" role="button">
+                                            <i class="fa-regular fa-copy font-30"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="roles with-box-shadow">
+                                    <div class="no-of-users-row">
+                                        <div><span>FlashSale</span></div>
+                                        <div class="roles-images roles-move-left">
+                                            <img src="{{asset('admincontent/images/avatars/1.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/5.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/4.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/12.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/6.png') }}">
+                                        </div>
+                                    </div>
+                                    <div class="roler-row">
+                                        <div class="row-details">
+                                            <p>Admins</p>
+                                            <p><a href="#" class="small-text no-text-deco lightblue-text">View All</a></p>
+                                        </div>
+                                        <div class="roles-move-left d-flex-end" role="button">
+                                            <i class="fa-regular fa-copy font-30"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="roles with-box-shadow">
+                                    <div class="no-of-users-row">
+                                        <div><span>Clearance Sale</span></div>
+                                        <div class="roles-images roles-move-left">
+                                            <img src="{{asset('admincontent/images/avatars/1.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/5.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/4.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/12.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/6.png') }}">
+                                        </div>
+                                    </div>
+                                    <div class="roler-row">
+                                        <div class="row-details" >
+                                            <p>Admins</p>
+                                            <p><a href="#" class="small-text no-text-deco lightblue-text">View All</a></p>
+                                        </div>
+                                        <div class="roles-move-left d-flex-end" role="button">
+                                            <i class="fa-regular fa-copy font-30"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="roles with-box-shadow">
+                                    <div class="no-of-users-row">
+                                        <div><span>Total 243 Users</span></div>
+                                        <div class="roles-images roles-move-left">
+                                            <img src="{{asset('admincontent/images/avatars/1.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/5.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/4.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/12.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/6.png') }}">
+                                        </div>
+                                    </div>
+                                    <div class="roler-row">
+                                        <div class="row-details" >
+                                            <p>Admins</p>
+                                            <p><a href="#" class="small-text no-text-deco lightblue-text">View All</a></p>
+                                        </div>
+                                        <div class="roles-move-left d-flex-end" role="button">
+                                            <i class="fa-regular fa-copy font-30"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="roles with-box-shadow">
+                                    <div class="no-of-users-row">
+                                        <div class="no-of-users"><span>Total 243 Users</span></div>
+                                        <div class="roles-images roles-move-left">
+                                            <img src="{{asset('admincontent/images/avatars/1.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/5.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/4.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/12.png') }}">
+                                            <img src="{{asset('admincontent/images/avatars/6.png') }}">
+                                        </div>
+                                    </div>
+                                    <div class="roler-row">
+                                        <div class="row-details" >
+                                            <p>Admins</p>
+                                            <p><a href="#" class="small-text no-text-deco lightblue-text">View All</a></p>
+                                        </div>
+                                        <div class="roles-move-left d-flex-end" role="button">
+                                            <i class="fa-regular fa-copy font-30"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- main page: transactions-order wrap row  -->
+                            <div class="rows single-table-larger-table">
+                                
+                                    
+                                <!-- recent orders: body wrap row  -->
+                                <div class="recent-orders white-bg with-box-shadow">
+                                    <div class="rows recent-orders-header">
+                                        <div class="count-invoice">
+                                            <div class="recent-orders-count">
+                                                <span>10</span><i class="bi bi-chevron-down"></i>
+                                            </div>
+        
+                                            <div class="">
+                                                <a href="#" class="create-invoice-btn darkblue-bg no-text-deco color-cream"> <i class="bi bi-plus"></i> <span>Create Invoice</span></a>
+                                            
+                                            </div>
+                                        </div>
+                                        
+
+                                        <div class="inner-search">
+                                            <form>
+
+                                                <div class="row form-row inner-search-form-row">
+                                                    <div class="col-sm-4">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" placeholder="Search Orders" aria-label="Example text with button addon" aria-describedby="button-addon1">  
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option selected>Filter</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>  
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <div class="form-group">
+                                                            <button class="inner-search-btn btn btn-outline-secondary darkblue-bg color-cream" type="submit" id="button-addon1"><i class="bi bi-search"></i></button>
+    
+                                                        </div>
+                                                    </div>
+                                                </div>                                 
+                                            </form>
+                                        </div>
+                                    </div>
+
+
+                                    <table class="table product-table">
+                                    
+                                        <thead>
+                                            <tr >
+                                                <td>ID</td>
+                                                <td>SUperAdmin</td>
+                                                <td>Contact</td>
+                                                <td>Products</td>
+                                                <td>Invoices</td>
+                                                <td>Actions</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                            <tr >
+                                                
+                                                <td>
+                                                    <span title="edfxghjgfdsasdfxgcfds1s32d" class="product-id-truncated">edfxghjgfdsasdfxgcfds1s32d</span></td>
+                                                <td class="">
+                                                    <div class="product">
+                                                        <div class="user-image-wrap">
+                                                            <div class="product-avatar rounded-image-wrap">
+                                                                <span class="user-no-image rounded-image with-box-shadow white-bg color-blue">VE</span>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <h6 class="product-name  user-name-table mb-0" >Virtue Egerega</h6>
+                                                            <small class="product-description-small">egeregav@gmail.com</small>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td class="grey-text" style="color: #6f6b7d;"><span>+2348074036471</span> </td>
+                                                <td class="grey-text" style="color: #6f6b7d;"><span>231,00</span> </td>
+                                                <td class="grey-text"><span>12,212</span> </td>
+                                              
+                                                <td>
+                                                    <div class="actions-td">
+                                                        <a href="#" class="actions-btn grey-text no-text-deco" title="send message"><i class="bi bi-pen"></i></a>
+                                                        <a href="#" class="actions-btng grey-text no-text-deco" title="view more"><i class="bi bi-eye"></i></a>
+                                                        <a  role="button" class="actions-btn grey-text no-text-deco" title="more actions" onclick="document.getElementById('extra-actions').style.display = 'block'; return false"><i class="bi bi-three-dots-vertical"></i></a>
+                                                        <div class="extra-actions with-box-shadow white-bg" id="extra-actions">
+                                                            <div class="close-row grey-bg-hover" ><a href="#" class="actions-btn-hidden no-text-deco " title="view more">Details</a> <i class="bi bi-x" role="button"  onclick="document.getElementById('extra-actions').style.display = 'none'"></i></div>
+                                                            <div><a href="#" class="actions-btn-hidden no-text-deco grey-bg-hover" title="view more">Edit</a></div>
+                                                            <form class="">
+                                                                <div class="row form-row">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="form-group">
+                                                                            <input type="hidden" class="form-control">
+                                                                            <button class="extra-actions-btn delete-btn grey-bg-hover" type="submit" id="button-addon1" >Delete</button>
+
+                                                                        </div>
+                                                                    </div>
+                                                                                                    
+                                                            </form>  
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </td>
+                                            </tr>
+                                            <tr >
+                                                
+                                                <td>
+                                                    <span title="edfxghjgfdsasdfxgcfds1s32d" class="product-id-truncated">edfxghjgfdsasdfxgcfds1s32d</span></td>
+                                                <td>
+                                                    <div class="product">
+                                                        <div class="user-image-wrap">
+                                                            <div class="product-avatar rounded-image-wrap">
+                                                                <span class="user-no-image rounded-image with-box-shadow white-bg color-red">VE</span>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <h6 class="product-name  user-name-table mb-0">Virtue Egerega</h6>
+                                                            <small class="product-description-small">egeregav@gmail.com</small>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td class="grey-text" style="color: #6f6b7d;"><span>+2348074036471</span> </td>
+                                                <td class="grey-text" style="color: #6f6b7d;"><span>231,00</span> </td>
+                                                <td class="grey-text"><span>12,212</span> </td>
+                                              
+                                                <td>
+                                                    <div class="actions-td">
+                                                        <a href="#" class="actions-btn grey-text no-text-deco" title="send message"><i class="bi bi-pen"></i></a>
+                                                        <a href="#" class="actions-btng grey-text no-text-deco" title="view more"><i class="bi bi-eye"></i></a>
+                                                        <a  role="button" class="actions-btn grey-text no-text-deco" title="more actions" onclick="document.getElementById('extra-actions').style.display = 'block'; return false"><i class="bi bi-three-dots-vertical"></i></a>
+                                                        <div class="extra-actions with-box-shadow white-bg" id="extra-actions">
+                                                            <div class="close-row grey-bg-hover" ><a href="#" class="actions-btn-hidden no-text-deco " title="view more">Details</a> <i class="bi bi-x" role="button"  onclick="document.getElementById('extra-actions').style.display = 'none'"></i></div>
+                                                            <div><a href="#" class="actions-btn-hidden no-text-deco grey-bg-hover" title="view more">Edit</a></div>
+                                                            <form class="">
+                                                                <div class="row form-row">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="form-group">
+                                                                            <input type="hidden" class="form-control">
+                                                                            <button class="extra-actions-btn delete-btn grey-bg-hover" type="submit" id="button-addon1" >Delete</button>
+
+                                                                        </div>
+                                                                    </div>
+                                                                                                    
+                                                            </form>  
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </td>
+                                            </tr>
+                                            <tr >
+                                                
+                                                <td>
+                                                    <span title="edfxghjgfdsasdfxgcfds1s32d" class="product-id-truncated">edfxghjgfdsasdfxgcfds1s32d</span></td>
+                                                <td>
+                                                    <div class="product">
+                                                        <div class="user-image-wrap">
+                                                            <div class="product-avatar rounded-image-wrap">
+                                                                <span class="user-no-image rounded-image with-box-shadow white-bg color-green">VE</span>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <h6 class="product-name  user-name-table mb-0">Virtue Egerega</h6>
+                                                            <small class="product-description-small">egeregav@gmail.com</small>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td class="grey-text" style="color: #6f6b7d;"><span>+2348074036471</span> </td>
+                                                <td class="grey-text" style="color: #6f6b7d;"><span>231,00</span> </td>
+                                                <td class="grey-text"><span>12,212</span> </td>
+                                              
+                                                <td>
+                                                    <div class="actions-td">
+                                                        <a href="#" class="actions-btn grey-text no-text-deco" title="send message"><i class="bi bi-pen"></i></a>
+                                                        <a href="#" class="actions-btng grey-text no-text-deco" title="view more"><i class="bi bi-eye"></i></a>
+                                                        <a  role="button" class="actions-btn grey-text no-text-deco" title="more actions" onclick="document.getElementById('extra-actions').style.display = 'block'; return false"><i class="bi bi-three-dots-vertical"></i></a>
+                                                        <div class="extra-actions with-box-shadow white-bg" id="extra-actions">
+                                                            <div class="close-row grey-bg-hover" ><a href="#" class="actions-btn-hidden no-text-deco " title="view more">Details</a> <i class="bi bi-x" role="button"  onclick="document.getElementById('extra-actions').style.display = 'none'"></i></div>
+                                                            <div><a href="#" class="actions-btn-hidden no-text-deco grey-bg-hover" title="view more">Edit</a></div>
+                                                            <form class="">
+                                                                <div class="row form-row">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="form-group">
+                                                                            <input type="hidden" class="form-control">
+                                                                            <button class="extra-actions-btn delete-btn grey-bg-hover" type="submit" id="button-addon1" >Delete</button>
+
+                                                                        </div>
+                                                                    </div>
+                                                                                                    
+                                                            </form>  
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </td>
+                                            </tr>
+                                            <tr >
+                                                
+                                                <td>
+                                                    <span title="edfxghjgfdsasdfxgcfds1s32d" class="product-id-truncated">edfxghjgfdsasdfxgcfds1s32d</span></td>
+                                                <td>
+                                                    <div class="product">
+                                                        <div class="user-image-wrap">
+                                                            <div class="product-avatar rounded-image-wrap">
+                                                                <span class="user-no-image rounded-image with-box-shadow white-bg color-yello">VE</span>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <h6 class="product-name  user-name-table mb-0">Virtue Egerega</h6>
+                                                            <small class="product-description-small">egeregav@gmail.com</small>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td class="grey-text" style="color: #6f6b7d;"><span>+2348074036471</span> </td>
+                                                <td class="grey-text" style="color: #6f6b7d;"><span>231,00</span> </td>
+                                                <td class="grey-text"><span>12,212</span> </td>
+                                              
+                                                <td>
+                                                    <div class="actions-td">
+                                                        <a href="#" class="actions-btn grey-text no-text-deco" title="send message"><i class="bi bi-pen"></i></a>
+                                                        <a href="#" class="actions-btng grey-text no-text-deco" title="view more"><i class="bi bi-eye"></i></a>
+                                                        <a  role="button" class="actions-btn grey-text no-text-deco" title="more actions" onclick="document.getElementById('extra-actions').style.display = 'block'; return false"><i class="bi bi-three-dots-vertical"></i></a>
+                                                        <div class="extra-actions with-box-shadow white-bg" id="extra-actions">
+                                                            <div class="close-row grey-bg-hover" ><a href="#" class="actions-btn-hidden no-text-deco " title="view more">Details</a> <i class="bi bi-x" role="button"  onclick="document.getElementById('extra-actions').style.display = 'none'"></i></div>
+                                                            <div><a href="#" class="actions-btn-hidden no-text-deco grey-bg-hover" title="view more">Edit</a></div>
+                                                            <form class="">
+                                                                <div class="row form-row">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="form-group">
+                                                                            <input type="hidden" class="form-control">
+                                                                            <button class="extra-actions-btn delete-btn grey-bg-hover" type="submit" id="button-addon1" >Delete</button>
+
+                                                                        </div>
+                                                                    </div>
+                                                                                                    
+                                                            </form>  
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </td>
+                                            </tr>
+
+                                            <tr >
+                                                
+                                                <td>
+                                                    <span title="edfxghjgfdsasdfxgcfds1s32d" class="product-id-truncated">edfxghjgfdsasdfxgcfds1s32d</span></td>
+                                                <td>
+                                                    <div class="product">
+                                                        <div class="user-image-wrap">
+                                                            <div class="product-avatar rounded-image-wrap">
+                                                                <span class="user-no-image rounded-image with-box-shadow white-bg color-blue">VE</span>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <h6 class="product-name  user-name-table mb-0">Virtue Egerega</h6>
+                                                            <small class="product-description-small">egeregav@gmail.com</small>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td class="grey-text" style="color: #6f6b7d;"><span>+2348074036471</span> </td>
+                                                <td class="grey-text" style="color: #6f6b7d;"><span>231,00</span> </td>
+                                                <td class="grey-text"><span>12,212</span> </td>
+                                              
+                                                <td>
+                                                    <div class="actions-td">
+                                                        <a href="#" class="actions-btn grey-text no-text-deco" title="send message"><i class="bi bi-pen"></i></a>
+                                                        <a href="#" class="actions-btng grey-text no-text-deco" title="view more"><i class="bi bi-eye"></i></a>
+                                                        <a  role="button" class="actions-btn grey-text no-text-deco" title="more actions" onclick="document.getElementById('extra-actions').style.display = 'block'; return false"><i class="bi bi-three-dots-vertical"></i></a>
+                                                        <div class="extra-actions with-box-shadow white-bg" id="extra-actions">
+                                                            <div class="close-row grey-bg-hover" ><a href="#" class="actions-btn-hidden no-text-deco " title="view more">Details</a> <i class="bi bi-x" role="button"  onclick="document.getElementById('extra-actions').style.display = 'none'"></i></div>
+                                                            <div><a href="#" class="actions-btn-hidden no-text-deco grey-bg-hover" title="view more">Edit</a></div>
+                                                            <form class="">
+                                                                <div class="row form-row">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="form-group">
+                                                                            <input type="hidden" class="form-control">
+                                                                            <button class="extra-actions-btn delete-btn grey-bg-hover" type="submit" id="button-addon1" >Delete</button>
+
+                                                                        </div>
+                                                                    </div>
+                                                                                                    
+                                                            </form>  
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </td>
+                                            </tr>
+                                            <tr >
+                                                
+                                                <td>
+                                                    <span title="edfxghjgfdsasdfxgcfds1s32d" class="product-id-truncated">edfxghjgfdsasdfxgcfds1s32d</span></td>
+                                                <td>
+                                                    <div class="product">
+                                                        <div class="user-image-wrap">
+                                                            <div class="product-avatar rounded-image-wrap">
+                                                                <span class="user-no-image rounded-image with-box-shadow white-bg color-blue">VE</span>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <h6 class="product-name  user-name-table mb-0">Virtue Egerega</h6>
+                                                            <small class="product-description-small">egeregav@gmail.com</small>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td class="grey-text" style="color: #6f6b7d;"><span>+2348074036471</span> </td>
+                                                <td class="grey-text" style="color: #6f6b7d;"><span>231,00</span> </td>
+                                                <td class="grey-text"><span>12,212</span> </td>
+                                              
+                                                <td>
+                                                    <div class="actions-td">
+                                                        <a href="#" class="actions-btn grey-text no-text-deco" title="send message"><i class="bi bi-pen"></i></a>
+                                                        <a href="#" class="actions-btng grey-text no-text-deco" title="view more"><i class="bi bi-eye"></i></a>
+                                                        <a  role="button" class="actions-btn grey-text no-text-deco" title="more actions" onclick="document.getElementById('extra-actions').style.display = 'block'; return false"><i class="bi bi-three-dots-vertical"></i></a>
+                                                        <div class="extra-actions with-box-shadow white-bg" id="extra-actions">
+                                                            <div class="close-row grey-bg-hover" ><a href="#" class="actions-btn-hidden no-text-deco " title="view more">Details</a> <i class="bi bi-x" role="button"  onclick="document.getElementById('extra-actions').style.display = 'none'"></i></div>
+                                                            <div><a href="#" class="actions-btn-hidden no-text-deco grey-bg-hover" title="view more">Edit</a></div>
+                                                            <form class="">
+                                                                <div class="row form-row">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="form-group">
+                                                                            <input type="hidden" class="form-control">
+                                                                            <button class="extra-actions-btn delete-btn grey-bg-hover" type="submit" id="button-addon1" >Delete</button>
+
+                                                                        </div>
+                                                                    </div>
+                                                                                                    
+                                                            </form>  
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </td>
+                                            </tr>
+
+                                            <tr >
+                                                
+                                                <td>
+                                                    <span title="edfxghjgfdsasdfxgcfds1s32d" class="product-id-truncated">edfxghjgfdsasdfxgcfds1s32d</span></td>
+                                                <td>
+                                                    <div class="product">
+                                                        <div class="user-image-wrap">
+                                                            <div class="product-avatar rounded-image-wrap">
+                                                                <span class="user-no-image rounded-image with-box-shadow white-bg color-blue">VE</span>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <h6 class="product-name  user-name-table mb-0">Virtue Egerega</h6>
+                                                            <small class="product-description-small">egeregav@gmail.com</small>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td class="grey-text" style="color: #6f6b7d;"><span>+2348074036471</span> </td>
+                                                <td class="grey-text" style="color: #6f6b7d;"><span>231,00</span> </td>
+                                                <td class="grey-text"><span>12,212</span> </td>
+                                              
+                                                <td>
+                                                    <div class="actions-td">
+                                                        <a href="#" class="actions-btn grey-text no-text-deco" title="send message"><i class="bi bi-pen"></i></a>
+                                                        <a href="#" class="actions-btng grey-text no-text-deco" title="view more"><i class="bi bi-eye"></i></a>
+                                                        <a  role="button" class="actions-btn grey-text no-text-deco" title="more actions" onclick="document.getElementById('extra-actions').style.display = 'block'; return false"><i class="bi bi-three-dots-vertical"></i></a>
+                                                        <div class="extra-actions with-box-shadow white-bg" id="extra-actions">
+                                                            <div class="close-row grey-bg-hover" ><a href="#" class="actions-btn-hidden no-text-deco " title="view more">Details</a> <i class="bi bi-x" role="button"  onclick="document.getElementById('extra-actions').style.display = 'none'"></i></div>
+                                                            <div><a href="#" class="actions-btn-hidden no-text-deco grey-bg-hover" title="view more">Edit</a></div>
+                                                            <form class="">
+                                                                <div class="row form-row">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="form-group">
+                                                                            <input type="hidden" class="form-control">
+                                                                            <button class="extra-actions-btn delete-btn grey-bg-hover" type="submit" id="button-addon1" >Delete</button>
+
+                                                                        </div>
+                                                                    </div>
+                                                                                                    
+                                                            </form>  
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </td>
+                                            </tr>
+                                            <tr >
+                                                
+                                                <td>
+                                                    <span title="edfxghjgfdsasdfxgcfds1s32d" class="product-id-truncated">edfxghjgfdsasdfxgcfds1s32d</span></td>
+                                                <td>
+                                                    <div class="product">
+                                                        <div class="user-image-wrap">
+                                                            <div class="product-avatar rounded-image-wrap">
+                                                                <span class="user-no-image rounded-image with-box-shadow white-bg color-blue">VE</span>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="d-flex flex-column">
+                                                            <h6 class="product-name  user-name-table mb-0">Virtue Egerega</h6>
+                                                            <small class="product-description-small">egeregav@gmail.com</small>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </td>
+                                                <td class="grey-text" style="color: #6f6b7d;"><span>+2348074036471</span> </td>
+                                                <td class="grey-text" style="color: #6f6b7d;"><span>231,00</span> </td>
+                                                <td class="grey-text"><span>12,212</span> </td>
+                                              
+                                                <td>
+                                                    <div class="actions-td">
+                                                        <a href="#" class="actions-btn grey-text no-text-deco" title="send message"><i class="bi bi-pen"></i></a>
+                                                        <a href="#" class="actions-btng grey-text no-text-deco" title="view more"><i class="bi bi-eye"></i></a>
+                                                        <a  role="button" class="actions-btn grey-text no-text-deco" title="more actions" onclick="document.getElementById('extra-actions').style.display = 'block'; return false"><i class="bi bi-three-dots-vertical"></i></a>
+                                                        <div class="extra-actions with-box-shadow white-bg" id="extra-actions">
+                                                            <div class="close-row grey-bg-hover" ><a href="#" class="actions-btn-hidden no-text-deco " title="view more">Details</a> <i class="bi bi-x" role="button"  onclick="document.getElementById('extra-actions').style.display = 'none'"></i></div>
+                                                            <div><a href="#" class="actions-btn-hidden no-text-deco grey-bg-hover" title="view more">Edit</a></div>
+                                                            <form class="">
+                                                                <div class="row form-row">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="form-group">
+                                                                            <input type="hidden" class="form-control">
+                                                                            <button class="extra-actions-btn delete-btn grey-bg-hover" type="submit" id="button-addon1" >Delete</button>
+
+                                                                        </div>
+                                                                    </div>
+                                                                                                    
+                                                            </form>  
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </td>
+                                            </tr>
+                                            
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+                <!-- extra details for notification ends here, available on click -->
+                <!-- extra details for profile, available on click -->
+                <div class="extra-details with-box-shadow white-bg" id="extra-details">
+                    <div class="header-profile">
+                        <div><img class="user-image" src="{{asset('admincontent/images/avatars/avartar-user.jpg') }}"></div>
+                        <div>
+                            <p class="user-name">Valex Benjamin</p>
+                            <p class="user-role">Super Admin</p>
+                        </div>
+                        <div class="close-extra" role="button" onclick="document.getElementById('extra-details').style.display = 'none'">
+                            <i class="bi bi-x "></i>
+                        </div>
+                    </div>
+                    <div><a href="#" class="details-btn-hidden no-text-deco grey-bg-hover" title="view more"><i class="bi bi-person-check"></i>&nbsp;&nbsp;&nbsp;My Profile</a></div>
+                    <div><a href="#" class="details-btn-hidden no-text-deco grey-bg-hover" title="view more"><i class="bi bi-gear"></i>&nbsp;&nbsp;&nbsp;Setting</a></div>
+                    <form class="">
+                        <div class="row form-row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <input type="hidden" class="form-control">
+                                    <button class="extra-details-btn delete-btn grey-bg-hover" type="submit" id="button-addon1"> <i class="bi bi-box-arrow-right"></i>&nbsp;&nbsp;&nbsp;Logout</button>
+
+                                </div>
+                            </div>
+                                                            
+                    </form>  
+                </div>
+                <!-- extra details for profile ends here, available on click -->
+            </section>
+        </div>
+
+        <script type="text/javascript">  
+            function showChildList(childname){
+                var childList = document.getElementById(childname)
+                childList.classList.remove("class_list_before_click");
+                childList.setAttribute('class', 'child-list' )
+            }
+
+        </script>
+        <script type="text/javascript" src="scripts/product-form.js') }}"></script>
+        <script type="text/javascript" src="scripts/menu.js') }}"></script>
+    </body>
+    
+</html>

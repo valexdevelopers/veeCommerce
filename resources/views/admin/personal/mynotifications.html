@@ -1,0 +1,475 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Admin | Home</title>
+        <meta charset="Utf-8">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="description" content="A robust, hihgly scalable, user friendly, seo optiomized Admin dashboard for ecommerce web site with great functionality and features by virtue">
+        <meta name="keywords" content="E-commerce, ecommerce, dashboard, robust, seo optimized, scalable">
+        <meta name="author" content="Egerega Virtue">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="dashboardStyles/standards.css" >
+        <link rel="stylesheet" href="dashboardStyles/mediaqueries.css" >
+        <link rel="stylesheet" href="dashboardStyles/custom.css" >
+        
+        <!--bootstrap css and js -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    </head>
+    <style>
+        
+    </style>
+    <body >
+        <div class="page-wrapper">
+            <section >
+                <div class="rows mother-row">
+                    <div class="menu-wrapper " id="menu_wrapper">
+                        
+                        <div class="menu_drop_down">
+                            <ul class="">
+                                <div class="menu-close-wrap lg-nodisplay">
+                                    <div>&nbsp;</div>
+                                    <div class="close-menu" id="menu-close-button" ><i class="bi bi-x"></i></div>
+                                </div>
+                                
+                                <!--  people -->
+                                <li class="content-description">People</li>
+
+                               
+                                    <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-admin'); return false;" role="button"> <i class="bi bi-people"></i><span>Admins</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section  class="child-list" id="child-list-admin" >
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-person-lines-fill"></i><span>Admin List</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-person-check"></i><span>Verify Admin</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-envelope"></i><span>Mail Admin</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-person"></i><span>Super Admin</span></a></li>
+
+                                    </section>
+                               
+
+                                
+                                    <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-user'); return false;" role="button"> <i class="bi bi-person-circle"></i><span>Users</span> <i class="bi bi-chevron-right" id="carret-opener"></i></a></li>
+                                    <section class="child-list" id="child-list-user">
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-person-lines-fill"></i><span>Users List</span></a></li>
+                                        
+                                    </section>
+                                
+                                <!-- end of people -->
+
+                                <!-- Store Inventory -->
+    
+                                <li class="content-description">Store Inventory</li>
+                                
+                                    <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-brand'); return false;" role="button"> <i class="bi bi-shield-check"></i><span>Brands</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section class="child-list" id="child-list-brand">
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-list"></i><span>Brand List</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-plus"></i><span>Add Brand</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-pen"></i><span>Edit Brand</span></a></li>
+
+                                    </section>
+
+                                
+                                <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-category'); return false;" role="button"> <i class="bi bi-boxes"></i><span>Categories</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section  class="child-list" id="child-list-category">
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-list"></i><span>Category List</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-plus"></i><span>Add Category</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-pen"></i><span>Edit Category</span></a></li>
+                                    </section>
+
+                                
+                                <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-product'); return false;" role="button"> <i class="bi bi-box-seam"></i><span>Products</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section class="child-list" id="child-list-product">
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-list"></i><span>Product List</span> </a></li>
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-plus"></i><span>Add Product</span> </a></li>
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-pen"></i><span>EditProduct</span> </a></li>
+                                    </section>
+                                <!-- end of Store Inventory -->
+
+                                <!-- Sales & Coupons-->
+                                <li class="content-description">Sales & Coupons</li>
+                                
+                                    <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-order'); return false;" role="button"> <i class="bi bi-cart4"></i><span>Orders</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section class="child-list" id="child-list-order" >
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-list"></i><span>Order List</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-plus"></i><span>Add Order</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-pen"></i><span>Edit Order</span></a></li>
+
+                                    </section>
+
+                                
+                                <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-purchase'); return false;" role="button"> <i class="bi bi-cart-check"></i><span>Purchases</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section class="child-list" id="child-list-purchase">
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-list"></i><span>Purchase List</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-plus"></i><span>Add Purchase</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-pen"></i><span>Edit Purchase</span></a></li>
+                                    </section>
+
+                                
+                                    <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-coupon'); return false;" role="button"> <i class="bi bi-percent"></i><span>Coupons</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section class="child-list" id="child-list-coupon">
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-list"></i><span>Coupon List</span> </a></li>
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-plus"></i><span>Add Coupon</span> </a></li>
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-pen"></i><span>Update Coupon</span> </a></li>
+                                    </section>
+                                <!-- end of Sales & Coupons-->
+                                
+                                <!-- Store Front-->
+                                <li class="content-description">Store Front</li>
+
+                                
+                                    <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-store-section'); return false;" role="button"> <i class="bi bi-tags"></i><span>Store Section</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section class="child-list" id="child-list-store-section">
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-list"></i><span>Section List</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-plus"></i><span>Add Section</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-pen"></i><span>Edit Section</span></a></li>
+
+                                    </section>
+
+                                
+                                    <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-banner'); return false;" role="button"> <i class="bi bi-flag"></i><span>Store Banner</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section class="child-list" id="child-list-banner" >
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-list"></i><span>Show Banner</span></a></li>
+                                        <li class="menu-li-item content" ><a href="#"> <i class="bi bi-pen"></i><span>Edit Banner</span></a></li>
+                                    </section>
+
+                                
+                                <li class="menu-li-item"><a href="#" onclick="showMenuChild('child-list-advert'); return false;" role="button"> <i class="bi bi-badge-ad"></i><span>Advert Banner</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section class="child-list" id="child-list-advert">
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-list"></i><span>Advert List</span> </a></li>
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-plus"></i><span>Add Advert</span> </a></li>
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-box-seam"></i><span>Update Advert</span> </a></li>
+                                    </section>
+
+                                
+                                <li class="menu-li-item"><a href="#" role="button"> <i class="bi bi-person-badge"></i><span>Logo</span> <i class="bi bi-chevron-right"></i></a></li>
+                                    <section class="child-list" >
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-box-seam"></i><span>View Logo</span> </a></li>
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-plus"></i><span>Add Logo</span> </a></li>
+                                        <li class="menu-li-item content"  ><a href="#"> <i class="bi bi-box-seam"></i><span></span> </a></li>
+                                    </section>
+                                <!-- end of Store Front-->
+
+                                <!-- Sales & Coupons-->
+                                <li class="content-description">Analytics</li>
+
+                                <li class="menu-li-item"><a href="#" role="button"> <i class="bi bi-person-circle"></i><span>Profile</span></a></li>
+                                   
+                                <li class="menu-li-item">
+                                    <form>
+                                        <button ><i class="bi bi-box-arrow-right"></i><span>Logout</span> </button>
+                                    </form>
+                                    
+                                    
+                                   
+                              
+                                    
+                                <!-- end of Sales & Coupons-->
+                            </ul>
+
+                        </div>
+
+                        
+                    </div>
+
+                    <!-- main page wrap -->
+                    <div class="main-page-wrapper">
+                        <!-- main page: header wrap row  -->
+                        <div class="rows header-row sticky-row with-box-shadow">
+                            <div class="lg-nodisplay menu-btn-wrap" id="menu-open-button">
+                                <button class="menu-open-button" role="button" onclick="document.getElementById('menu_wrapper').style.display = 'block'"><i class="bi bi-list"></i> </button>
+                            </div>
+                            <div class="brand">
+                                <img class="logo" src="{{asset('admincontent/images/logo/logo.png') }}" alt="brand logo" title="logo">
+                            </div>
+                            <div >
+                                <form class="header-search-form">
+                                    <div class="input-group ">
+                                        <input type="text" class="form-control search-input" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                        <button class="search-btn darkblue-bg color-cream" type="submit" id="button-addon1"><i class="bi bi-search search-btn"></i></button>
+                                      </div>                                      
+                                </form>
+                            </div>
+                            <div class="avatar-notification-wrap">
+                                <div class="notifications" role="button" onclick="document.getElementById('notification-wrap').style.display = 'block'"><i class="bi bi-bell"></i><span class="notification-count darkblue-bg color-cream">5</span></div>
+
+                                <div class="profile-details" role="button" onclick="document.getElementById('extra-details').style.display = 'block'"><img class="user-image" src="{{asset('admincontent/images/avatars/avartar-user.jpg') }}" ></div>
+                            </div>
+                            
+                        </div>
+                        
+                        <!-- main page: roles-wrap wrap row  -->
+                        <section class="scroll-y">
+                            <div>
+                                <div class="header-details">
+                                    <div>
+                                        <div class="order-id-wrap">
+                                            <h6 class="" style="color: #57565d ;">Notifications </h6>
+                                            
+                                        </div>
+                                        
+                                       <small class=" order-extra-details">Aug 17, 2023, 5:48 (ET)</small>
+                                    </div>
+                                    <div class="delete-order-container">
+                                        <div><a role="button" class="red-bg color-red button-1 no-text-deco">Delete Notification</a></div>
+                                    </div>
+                                </div>
+                                <div class="padding-5">
+                                    
+                                    <div class="lg-grid-70-30 ">
+                                        <div class=" grid-col-70 ">
+                                             <div class=" grid-col-70 ">
+                                                <div class="with-box-shadow white-bg rounded-edges padding-20">
+                                                    <form>
+                                                        <div class="">
+                                                            <div class=""><h6 class="product-name">My Notifications</h6></div>
+                                                            <div class="row form-row">
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label">First Name</label>
+                                                                        <input type="number" class="form-control appearance-text-field" placeholder="Price">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label">Last Name</label>
+                                                                        <input type="number" class="form-control appearance-text-field" placeholder="Price">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row form-row">
+                                                                <div class="col-md-6 col-sm-12">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label">Username</label>
+                                                                        <input type="text" class="form-control appearance-text-field" placeholder="Price">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 col-sm-12">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label">Phone</label>
+                                                                        <input type="tel" class="form-control appearance-text-field" placeholder="Price">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row form-row">
+                                                                <div class="col-sm-12">
+                                                                    <div class="form-group thick">
+                                                                        Password Change
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </div>
+
+                                                            <div class="row form-row">
+                                                                <div class="col-md-6 col-sm-12">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label">New Password  (leave blank to leave unchanged)</label>
+                                                                        <input type="text" class="form-control appearance-text-field" placeholder="Price">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 col-sm-12">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label">Confirm Password  (leave blank to leave unchanged)</label>
+                                                                        <input type="tel" class="form-control appearance-text-field" placeholder="Price">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row form-row">
+                                                                
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                      <button type="button" role="button" class="add-option darkblue-bg color-white rounded-edges" id="create-option-btn">Add another Option</button>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </form>
+                                                    
+                                                </div>
+    
+                                                
+                                                
+                                                
+                                            </div>
+                                            
+                                        </div>
+
+
+                                        <div class="grid-col-30 " >
+                                            <div class="with-box-shadow white-bg rounded-edges padding-20">
+                                               <div class="logged-in-user-container">
+                                                    <div class="user-card">
+                                                        <div><img src="{{asset('admincontent/images/avatars/avatar-1577909_1280.webp" class="user-image-large rounded-edges" /></div>
+                                                        <div class="name-id-container">
+                                                            <h4>Lorine Hischke</h4>
+                                                            <p>Customer ID #634759</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card-order-total-container">
+                                                       <div class="card-order-total order-card">
+                                                            <div class="card-order-total-icon-wrap">
+                                                                <span><i class="bi bi-cart3"></i></span>
+                                                            </div>
+
+                                                            <div class="card-0-t-details">
+                                                                <p >123</p>
+                                                                <p>Orders</p>
+                                                                
+                                                            </div>
+
+                                                       </div> 
+                                                       <div class="card-order-total spent-card">
+                                                            <div class="card-order-total-icon-wrap">
+                                                                <span><i class="bi bi-cart3"></i></span>
+                                                            </div>
+                                                            <div class="card-0-t-details">
+                                                                <p>₦12,212</p>
+                                                                <p>Spent</p>
+                                                            </div>
+
+                                                       </div>
+                                                    </div>
+                                               </div>
+                                                <div class="user-more mt-20 mt-20-sm">
+                                                    <div><h4>User Details</h4></div>
+                                                    <section class="mt-20 mt-20-sm">
+                                                        <div class="user-more-details"><p><span class="user-details-header">Username:</span> <span class="user-details-light">lorinehicler</span></p></div>
+                                                    <div class="user-more-details"><p><span class="user-details-header">Email:</span> <span class="user-details-light">vafgot@vultukir.org</span></p></div>
+                                                    <div class="user-more-details"><p><span class="user-details-header">Contact:</span> <span class="user-details-light"> (123) 456-7890</span></p></div>
+                                                    <div class="user-more-details"><p><span class="user-details-header">Country:</span> <span class="user-details-light">Nigeria</span></p></div>
+                                                    </section>
+                                                    
+                                                </div>
+                                                <div class="edit-profile-user-card">
+                                                    <a href="#" class="darkblue-bg color-white no-text-deco rounded-edges">Edit</a>
+                                                </div>
+                                            </div>
+
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                
+                            </div>
+                            
+                            <div>&nbsp;</div>
+                            <div>&nbsp;</div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- extra details for notification, available on click -->
+                <div class="notification-wrap with-box-shadow white-bg" id="notification-wrap">
+                    <div class="notification-header-profile">
+                        <div><h2>Notifications</h2></div>
+                        <div class="close-extra" role="button" onclick="document.getElementById('notification-wrap').style.display = 'none'">
+                            <i class="bi bi-x "></i>
+                        </div>
+                    </div>
+                    <div class="notifications-table">
+                        <table class="table ">
+                            <tbody>
+                                <tr class="">
+                                    <td class="notifier-image"><img src="{{asset('admincontent/images/avatars/1.png') }}" class="user-image rounded-image" ></td>
+                                    <td>
+                                        <a href="#" class="no-text-deco" style="color: rgb(40, 40, 40);">
+                                            <p class="notifier"><strong>Virtue Egerega</strong></p>
+                                        <p class="notification-message">Hello Admins, We have a meeting at 4pm fridnotification-messageanotification-message...</p>
+                                       
+                                        </a>
+                                        
+                                    </td>
+                                    <td class="time-passed">10 min ago</td>
+                                </tr>
+                                <tr>
+                                    <td class="notifier-image"><img src="{{asset('admincontent/images/avatars/1.png') }}" class="user-image rounded-image" ></td>
+                                    <td>
+                                        <p class="notifier"><strong>Virtue Egerega</strong></p>
+                                        <p class="notification-message">Hello Admins, We have a meeting at 4pm fridnotification-messageanotification-message...</p>
+                                       
+                                    </td>
+                                    <td class="time-passed">10 min ago</td>
+                                </tr>
+                                <tr>
+                                    <td class="notifier-image"><img src="{{asset('admincontent/images/avatars/1.png') }}" class="user-image rounded-image" ></td>
+                                    <td>
+                                        <p class="notifier"><strong>Virtue Egerega</strong></p>
+                                        <p class="notification-message">Hello Admins, We have a meeting at 4pm fridnotification-messageanotification-message...</p>
+                                       
+                                    </td>
+                                    <td class="time-passed">10 min ago</td>
+                                </tr>
+                                <tr>
+                                    <td class="notifier-image"><img src="{{asset('admincontent/images/avatars/1.png') }}" class="user-image rounded-image" ></td>
+                                    <td>
+                                        <p class="notifier"><strong>Virtue Egerega</strong></p>
+                                        <p class="notification-message">Hello Admins, We have a meeting at 4pm fridnotification-messageanotification-message...</p>
+                                       
+                                    </td>
+                                    <td class="time-passed">10 min ago</td>
+                                </tr>
+                                <tr>
+                                    <td class="notifier-image"><img src="{{asset('admincontent/images/avatars/1.png') }}" class="user-image rounded-image" ></td>
+                                    <td>
+                                        <p class="notifier"><strong>Virtue Egerega</strong></p>
+                                        <p class="notification-message">Hello Admins, We have a meeting at 4pm fridnotification-messageanotification-message...</p>
+                                       
+                                    </td>
+                                    <td class="time-passed">10 min ago</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+                <!-- extra details for notification ends here, available on click -->
+                <!-- extra details for profile, available on click -->
+                <div class="extra-details with-box-shadow white-bg" id="extra-details">
+                    <div class="header-profile">
+                        <div><img class="user-image" src="{{asset('admincontent/images/avatars/avartar-user.jpg') }}"></div>
+                        <div>
+                            <p class="user-name">Valex Benjamin</p>
+                            <p class="user-role">Super Admin</p>
+                        </div>
+                        <div class="close-extra" role="button" onclick="document.getElementById('extra-details').style.display = 'none'">
+                            <i class="bi bi-x "></i>
+                        </div>
+                    </div>
+                    <div><a href="#" class="details-btn-hidden no-text-deco grey-bg-hover" title="view more"><i class="bi bi-person-check"></i>&nbsp;&nbsp;&nbsp;My Profile</a></div>
+                    <div><a href="#" class="details-btn-hidden no-text-deco grey-bg-hover" title="view more"><i class="bi bi-gear"></i>&nbsp;&nbsp;&nbsp;Setting</a></div>
+                    <form class="">
+                        <div class="row form-row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <input type="hidden" class="form-control">
+                                    <button class="extra-details-btn delete-btn grey-bg-hover" type="submit" id="button-addon1"> <i class="bi bi-box-arrow-right"></i>&nbsp;&nbsp;&nbsp;Logout</button>
+
+                                </div>
+                            </div>
+                                                            
+                    </form>  
+                </div>
+                <!-- extra details for profile ends here, available on click -->
+            </section>
+        </div>
+
+        <script type="text/javascript">  
+            function showChildList(childname){
+                var childList = document.getElementById(childname)
+                childList.classList.remove("class_list_before_click");
+                childList.setAttribute('class', 'child-list' )
+            }
+
+        </script>
+        <script type="text/javascript" src="scripts/product-form.js') }}"></script>
+        <script type="text/javascript" src="scripts/menu.js') }}"></script>
+    </body>
+    
+</html>
