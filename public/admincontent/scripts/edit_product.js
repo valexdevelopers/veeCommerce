@@ -97,3 +97,45 @@ $(document).ready(function (){
         $('#proceed').css('display', 'block')
     });
 });
+
+
+
+{{--    
+    <table class="table product-table drag-list" id="dragList">
+               <thead>
+                   <tr>
+                       <td><input type="checkbox" class="" size="4" name="selected-row"></td>
+                       <td>Task Name</td>
+                       
+                   </tr>
+               </thead>
+               <tbody>
+                  
+                   
+                   @foreach($tasks as $task)
+                      
+                       <tr class="drag-item" draggable="true" style="cursor: move;">
+                           <td><input type="checkbox" class="" size="4" name="selected-row"></td>
+                           
+                           <td class="grey-text singletask" style="color: #6f6b7d;" task_id="{{$task->id}}"><span>{{$task->task_name}}</span> </td>
+                       
+                           {{-- <td class="grey-text"> <span>{{$singleProduct->quantity }}</span></td>
+                       </tr>
+                   @endforeach
+                   
+                   
+                   
+               </tbody>
+           </table>
+           {{-- <ul class="drag-list" id="dragList">
+               @foreach($tasks as $task)
+                      
+                       <li class="drag-item" draggable="true" style="cursor: move;">
+                           <td><input type="checkbox" class="" size="4" name="selected-row"></td>
+                           
+                           <td class="grey-text" style="color: #6f6b7d;"><span>{{$task->task_name}}</span> </td>
+                       
+                           {{-- <td class="grey-text"> <span>{{$singleProduct->quantity }}</span></td>
+                       </li>
+                   @endforeach
+           </ul> --}}
